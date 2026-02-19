@@ -14,7 +14,7 @@ public class LiteraluraApplication implements CommandLineRunner {
     @Autowired
     private LibroRepository repository;
 
-    @Autowired // Agrega esto
+    @Autowired
     private AutorRepository autorRepository;
 
     public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class LiteraluraApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // Ahora le pasamos AMBOS repositorios a la clase Principal
+    
         Principal principal = new Principal(repository, autorRepository);
         principal.muestraElMenu();
     }
