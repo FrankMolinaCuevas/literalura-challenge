@@ -17,12 +17,11 @@ public class Libro {
 
     @ManyToOne
     @JoinColumn(name = "autor_id")
-    private Autor autor; // Ahora es un objeto, no un String
+    private Autor autor; 
 
     public Libro() {}
 
-    // El constructor ahora solo inicializa datos básicos
-    // El autor se asigna después en la clase Principal con setAutor()
+ 
     public Libro(DatosLibro datosLibro) {
         this.titulo = datosLibro.titulo();
         this.idioma = datosLibro.idiomas().get(0);
@@ -45,7 +44,6 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    // El Getter y Setter ahora usan la clase Autor
     public Autor getAutor() {
         return autor;
     }
@@ -72,7 +70,7 @@ public class Libro {
 
     @Override
     public String toString() {
-        // Usamos autor.getNombre() para que en consola salga el texto y no el objeto raro
+      
         String nombreAutor = (autor != null) ? autor.getNombre() : "Autor desconocido";
         return "---------- LIBRO ----------\n" +
                 "Título: " + titulo + "\n" +
