@@ -17,7 +17,7 @@ public class Principal {
     private ConvierteDatos conversor = new ConvierteDatos();
     private final String URL_BASE = "https://gutendex.com/books/";
     private LibroRepository repositorio;
-    private AutorRepository autorRepository; // Unificado sin la 'o' final
+    private AutorRepository autorRepository; 
 
     public Principal(LibroRepository repository, AutorRepository autorRepository) {
         this.repositorio = repository;
@@ -85,7 +85,7 @@ public class Principal {
             DatosLibro datosLibro = datosBusqueda.resultados().get(0);
 
             DatosAutor datosAutor = datosLibro.autor().get(0);
-            // Corregido a autorRepository
+           
             Optional<Autor> autorOpcional = autorRepository.findByNombreIgnoreCase(datosAutor.nombre());
 
             Autor autor;
