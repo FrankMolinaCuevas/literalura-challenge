@@ -38,8 +38,6 @@ public class Autor {
         }
     }
 
-    // --- GETTERS Y SETTERS (Indispensables para que desaparezcan los errores) ---
-
     public Long getId() {
         return id;
     }
@@ -82,7 +80,7 @@ public class Autor {
 
     @Override
     public String toString() {
-        // Mejoramos el toString para que muestre los libros de este autor si los tiene
+      
         String librosNombres = (libros != null) ?
                 libros.stream().map(Libro::getTitulo).collect(Collectors.joining(", ")) : "Ninguno";
 
