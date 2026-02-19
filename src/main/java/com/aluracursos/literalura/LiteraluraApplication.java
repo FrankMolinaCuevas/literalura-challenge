@@ -1,6 +1,6 @@
 package com.aluracursos.literalura;
 
-import com.aluracursos.literalura.principal.Principal; // Este es el nuevo import clave
+import com.aluracursos.literalura.principal.Principal;
 import com.aluracursos.literalura.repository.AutorRepository;
 import com.aluracursos.literalura.repository.LibroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
